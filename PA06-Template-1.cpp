@@ -103,3 +103,23 @@ void countOccurrences(T low, T high, size_t nElements)
             << " occurs " << vCounts.at(i) << " times\n";
     }
 }
+
+
+/*******************************************************************************
+    README Answers
+
+    1. The template function relies on operations like rand and comparison == to
+    generate and count values, so the variable has to be a type that will work
+    with those operations such as numeric types (char, int, etc)
+
+    2. 
+    std::string - doesn't work with those operations
+    bool - only has 2 possible values, so random logic doesn't work properly
+    float - rand() % requires int operands, or else there's a compiler error
+
+    3. The vector is initialized with existing elements, making the vector
+    larger needlessly
+     
+    4. std::count would be easier because it would replace the nested loop.
+
+*******************************************************************************/
